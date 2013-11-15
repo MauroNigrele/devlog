@@ -1,0 +1,14 @@
+src/.htaccess
+src/wp-content/uploads/
+src/wp-content/blogs.dir/
+src/wp-content/upgrade/
+src/wp-content/backup-db/
+src/wp-content/advanced-cache.php
+src/wp-content/wp-cache-config.php
+src/sitemap.xml
+src/*.log
+src/wp-content/cache/
+src/wp-content/backups/
+src/sitemap.xml.gz
+_dumps/
+logs/
