@@ -171,8 +171,10 @@ function new_google_login_action() {
 // Solo Soportar Lyracons y BlLabs
 $emailPart = explode('@', $email);
 if($emailPart[1] != 'lyracons.com' && $emailPart[1] != 'bl-labs.com') {
-    throw new Exception('Dominio Invalido');
-    die('NO PAPA');
+    
+    header('LOCATION: ' . wp_login_url());
+    exit;
+    
 }
     
     $ID = $wpdb->get_var($wpdb->prepare('
