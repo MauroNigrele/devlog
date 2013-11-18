@@ -172,9 +172,9 @@ function new_google_login_action() {
 $emailPart = explode('@', $email);
 if($emailPart[1] != 'lyracons.com' && $emailPart[1] != 'bl-labs.com') {
     
-    header('LOCATION: ' . wp_login_url());
+    $url = wp_login_url() . '?registration=disabled';
+//    header('LOCATION: ' . $url);
     exit;
-    
 }
     
     $ID = $wpdb->get_var($wpdb->prepare('
