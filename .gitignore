@@ -10,5 +10,6 @@ src/*.log
 src/wp-content/cache/
 src/wp-content/backups/
 src/sitemap.xml.gz
+src/wp-config.php
 _dumps/
 logs/
