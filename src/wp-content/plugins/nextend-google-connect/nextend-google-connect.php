@@ -167,6 +167,14 @@ function new_google_login_action() {
     // See http://www.php.net/manual/en/filter.filters.sanitize.php
 
     $email = filter_var($u['email'], FILTER_SANITIZE_EMAIL);
+    
+// Solo Soportar Lyracons y BlLabs
+$emailPart = explode('@', $email);
+if($emailPart[1] != 'lyracons.com' && $emailPart[1] != 'bl-labs.com') {
+    throw new Exception('Dominio Invalido');
+    die('NO PAPA');
+}
+    
     $ID = $wpdb->get_var($wpdb->prepare('
       SELECT ID FROM ' . $wpdb->prefix . 'social_users WHERE type = "google" AND identifier = "%s"
     ', $u['id']));

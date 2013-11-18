@@ -13,3 +13,4 @@ src/sitemap.xml.gz
 src/wp-config.php
 _dumps/
 logs/
+nbproject/
