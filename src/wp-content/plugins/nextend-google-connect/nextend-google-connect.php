@@ -173,7 +173,7 @@ $emailPart = explode('@', $email);
 if($emailPart[1] != 'lyracons.com' && $emailPart[1] != 'bl-labs.com') {
     
     $url = wp_login_url() . '?registration=disabled';
-//    header('LOCATION: ' . $url);
+    header('LOCATION: ' . $url);
     exit;
 }
     
